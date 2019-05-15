@@ -18,7 +18,7 @@
               </div>
               <ng-container *ngFor="let row of rows; let rowIndex = index">
                   <ng-container *ngFor="let column of columns.length + 1 | toCollection; let columnIndex = index">
-                      <div class="cell rowTitle" *ngIf="columnIndex === 0">{{row[columnIndex].value | uppercase }}</div>  
+                      <div class="cell rowTitle" *ngIf="columnIndex === 0">{{row[columnIndex*(1+rowIndex)].value | uppercase }}</div>  
                       <div class="cell" *ngIf="columnIndex > 0 ">
                         <div class="cell-icon" [ngStyle]="styleCell(row[columnIndex].value)"></div>
 
@@ -35,10 +35,11 @@
                     {{column.value}}
                   </div>
                   <ng-container *ngFor="let row of rows; let rowIndex = index">
+                 
                       <ng-container *ngFor="let column of columns.length | toCollection; let columnIndex = index">
-                          <div class="cell rowTitle" *ngIf="columnIndex === 0">{{row[columnIndex].value | uppercase }}</div>  
-                          <div class="cell" *ngIf="columnIndex > 0 ">
-                              <div class="cell-icon" [ngStyle]="styleCell(row[columnIndex].value)"></div>
+                          <div class="cell" *ngIf="row[(columnIndex + (columns.length) * (monthIndex))+1]">
+
+                            <div class="cell-icon" [ngStyle]="styleCell(row[(columnIndex + (columns.length) * (monthIndex))+1].value)">x</div>
                           </div>  
                         </ng-container>
                   </ng-container >
