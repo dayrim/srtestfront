@@ -1,6 +1,6 @@
 # SRtest front-end
 
-The app is available at https://srtestfront.herokuapp.com
+The app is hosted at https://srtestfront.herokuapp.com
 
 ## Local installation guide
 
