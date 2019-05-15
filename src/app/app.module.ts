@@ -12,9 +12,8 @@ export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   threshold: 50,
   spaceBetween: 35,
-  slidesPerView: 2.2,
-  initialSlide: 1,
-  centeredSlides: true,
+  slidesPerView: 2.4,
+  initialSlide: 0,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
