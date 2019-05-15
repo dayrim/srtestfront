@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~swiper/dist/css/swiper.min.css';
+.swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color:#000;
+    opacity: 1;
+    background: rgba(0,0,0,0.2);
+  }
+  .swiper-pagination-bullet-active {
+    color:#fff;
+    background: #007aff;
+  }
+  body{
+    text-align: center;
+    font-family: 'Verdana'
+  }
+  svg{
+    path{
+      color: green;
+      fill: green;
+    }
+  
+  }
